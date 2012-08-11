@@ -1,0 +1,10 @@
+<% if @articles.empty? %>
+		<p> Sorry nothing here</>
+	<% else %>	
+		<% @articles.each do |a| %>
+		<h1> <%= a.title %> </h1>
+	<div>
+		<%= simple_format(a.content) %>
+	</div>
+	<%end %>	
+<%end %>
